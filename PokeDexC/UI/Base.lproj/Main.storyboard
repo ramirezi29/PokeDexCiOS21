@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="adE-C3-JI5">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Poke Search View Controller-->
+        <scene sceneID="qQW-Sh-P1S">
+            <objects>
+                <viewController id="EDt-Jc-dxv" customClass="IRPokeSearchViewController" customModule="PokeDexC" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1vT-nh-dMB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="gdS-bX-z7T">
+                                <rect key="frame" x="0.0" y="64" width="375" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </searchBar>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="36" translatesAutoresizingMaskIntoConstraints="NO" id="TOL-Wy-Tni">
+                                <rect key="frame" x="166.5" y="267" width="42" height="133.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J5X-Xe-D0C">
+                                        <rect key="frame" x="0.0" y="0.0" width="42" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gZp-yd-UGD">
+                                        <rect key="frame" x="0.0" y="56.5" width="42" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1TY-PN-oHs">
+                                        <rect key="frame" x="0.0" y="113" width="42" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="gdS-bX-z7T" firstAttribute="leading" secondItem="fTZ-Gj-19E" secondAttribute="leading" id="1h9-ef-obc"/>
+                            <constraint firstItem="TOL-Wy-Tni" firstAttribute="centerY" secondItem="1vT-nh-dMB" secondAttribute="centerY" id="VH3-aH-6yY"/>
+                            <constraint firstItem="TOL-Wy-Tni" firstAttribute="centerX" secondItem="1vT-nh-dMB" secondAttribute="centerX" id="bke-xp-QjS"/>
+                            <constraint firstItem="gdS-bX-z7T" firstAttribute="trailing" secondItem="fTZ-Gj-19E" secondAttribute="trailing" id="fZw-Fe-lgt"/>
+                            <constraint firstItem="gdS-bX-z7T" firstAttribute="top" secondItem="fTZ-Gj-19E" secondAttribute="top" id="tnv-cT-15D"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fTZ-Gj-19E"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="0Na-jh-79w"/>
+                    <connections>
+                        <outlet property="abilitiesLabel" destination="1TY-PN-oHs" id="IBl-Qn-T5o"/>
+                        <outlet property="idLabel" destination="gZp-yd-UGD" id="m3O-cP-7US"/>
+                        <outlet property="nameLabel" destination="J5X-Xe-D0C" id="4O5-Xe-IxI"/>
+                        <outlet property="searchBar" destination="gdS-bX-z7T" id="ozL-PH-vMx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A0h-GH-Dbj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="375.19999999999999" y="109.29535232383809"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="cPo-WI-hgX">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="adE-C3-JI5" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="i3Y-q8-olJ">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="EDt-Jc-dxv" kind="relationship" relationship="rootViewController" id="f8i-Dl-cJ2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LmT-jA-RAX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-564" y="109.29535232383809"/>
+        </scene>
+    </scenes>
+</document>
